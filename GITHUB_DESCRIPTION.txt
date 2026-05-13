@@ -1,0 +1,34 @@
+📱 Modern React Portfolio Website
+
+A stunning, fully responsive portfolio built with React, TypeScript, and Tailwind CSS. Features include:
+
+✨ Key Features:
+• Responsive design (mobile, tablet, desktop)
+• Interactive animations with Framer Motion
+• Contact form with EmailJS integration
+• Tech skills showcase with animated icon cloud
+• Multiple sections: Hero, Projects, Skills, Experience, Education, Training
+• Smooth scrolling navigation
+• GitHub Pages deployment ready
+
+🛠️ Tech Stack:
+• React 19.1 & TypeScript
+• Tailwind CSS for modern styling
+• EmailJS for contact form
+• React Scroll for smooth navigation
+• React Icon Cloud for skill visualization
+
+🚀 Quick Start:
+git clone https://github.com/rajritik21/Ritik_Portfolio.git
+cd Ritik_Portfolio
+npm install
+npm start
+
+📦 Build & Deploy:
+npm run build
+npm run deploy (for GitHub Pages)
+
+🔧 Customizable:
+Easily customize personal info, projects, skills, and colors. Perfect as a portfolio template for developers!
+
+📄 MIT License - Free to use and modify
