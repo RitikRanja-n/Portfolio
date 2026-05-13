@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Ritik_Portfolio/static/css/main.013c9648.css",
+    "main.js": "/Ritik_Portfolio/static/js/main.6c3fe162.js",
+    "static/js/453.1407b060.chunk.js": "/Ritik_Portfolio/static/js/453.1407b060.chunk.js",
+    "index.html": "/Ritik_Portfolio/index.html",
+    "main.013c9648.css.map": "/Ritik_Portfolio/static/css/main.013c9648.css.map",
+    "main.6c3fe162.js.map": "/Ritik_Portfolio/static/js/main.6c3fe162.js.map",
+    "453.1407b060.chunk.js.map": "/Ritik_Portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.013c9648.css",
+    "static/js/main.6c3fe162.js"
+  ]
+}
