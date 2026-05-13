@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Ritik_Portfolio/static/css/main.013c9648.css",
-    "main.js": "/Ritik_Portfolio/static/js/main.6c3fe162.js",
-    "static/js/453.1407b060.chunk.js": "/Ritik_Portfolio/static/js/453.1407b060.chunk.js",
-    "index.html": "/Ritik_Portfolio/index.html",
-    "main.013c9648.css.map": "/Ritik_Portfolio/static/css/main.013c9648.css.map",
-    "main.6c3fe162.js.map": "/Ritik_Portfolio/static/js/main.6c3fe162.js.map",
-    "453.1407b060.chunk.js.map": "/Ritik_Portfolio/static/js/453.1407b060.chunk.js.map"
+    "main.css": "/Portfolio/static/css/main.013c9648.css",
+    "main.js": "/Portfolio/static/js/main.b43af41c.js",
+    "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
+    "index.html": "/Portfolio/index.html",
+    "main.013c9648.css.map": "/Portfolio/static/css/main.013c9648.css.map",
+    "main.b43af41c.js.map": "/Portfolio/static/js/main.b43af41c.js.map",
+    "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.013c9648.css",
-    "static/js/main.6c3fe162.js"
+    "static/js/main.b43af41c.js"
   ]
 }
