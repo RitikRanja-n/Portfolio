@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,57 +105,74 @@ const Navbar: React.FC = () => {
       </div>
       
       {/* Mobile Menu */}
-      <motion.div
-        className="fixed top-0 right-0 h-screen w-64 bg-dark shadow-lg md:hidden"
-        initial={{ x: '100%' }}
-        animate={{ x: isOpen ? 0 : '100%' }}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      >
-        <div className="flex justify-end p-4">
-          <motion.button
-            onClick={toggleMenu}
-            className="text-gray-300 hover:text-secondary"
-            whileTap={{ scale: 0.9 }}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed top-0 right-0 h-screen w-64 bg-dark shadow-lg md:hidden z-[60]"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
-            <XMarkIcon className="h-6 w-6" />
-          </motion.button>
-        </div>
-        <div className="flex flex-col space-y-4 p-4">
-          {navLinks.map((link, index) => (
-            <motion.div
-              key={link.name}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ 
-                duration: 0.3, 
-                delay: index * 0.1,
-                when: "beforeChildren"
-              }}
-              className="relative"
-            >
-              <Link
-                to={link.to}
-                spy={true}
-                smooth={true}
-                duration={500}
+            <div className="flex justify-end p-4">
+              <motion.button
                 onClick={toggleMenu}
-                onSetActive={() => setActiveSection(link.to)}
-                className="text-gray-300 hover:text-secondary cursor-pointer transition-colors duration-300 py-2 block"
+                className="text-gray-300 hover:text-secondary"
+                whileTap={{ scale: 0.9 }}
               >
-                {link.name}
-                {activeSection === link.to && (
-                  <motion.div
-                    layoutId="mobileUnderline"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-secondary"
-                    initial={{ width: 0 }}
-                    animate={{ width: '30%' }}
-                  />
-                )}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+                <XMarkIcon className="h-6 w-6" />
+              </motion.button>
+            </div>
+            <div className="flex flex-col space-y-4 p-4">
+              {navLinks.map((link, index) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ 
+                    duration: 0.3, 
+                    delay: index * 0.1,
+                  }}
+                  className="relative"
+                >
+                  <Link
+                    to={link.to}
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={toggleMenu}
+                    onSetActive={() => setActiveSection(link.to)}
+                    className="text-gray-300 hover:text-secondary cursor-pointer transition-colors duration-300 py-2 block"
+                  >
+                    {link.name}
+                    {activeSection === link.to && (
+                      <motion.div
+                        layoutId="mobileUnderline"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-secondary"
+                        initial={{ width: 0 }}
+                        animate={{ width: '30%' }}
+                      />
+                    )}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={toggleMenu}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[55] md:hidden"
+          />
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

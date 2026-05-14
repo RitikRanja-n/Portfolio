@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with **React**, **TypeScript**, and **Tailwind CSS**. Showcase your skills, projects, education, and experience with a stunning interactive interface.
 
-**Live Demo:** [https://rajritik21.github.io/Ritik_Portfolio/](https://rajritik21.github.io/Ritik_Portfolio/)
+**Live Demo:** [https://rajritik21.github.io/Portfolio/](https://rajritik21.github.io/Portfolio/)
 
 ---
 
@@ -51,8 +51,8 @@ Before you begin, ensure you have installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/rajritik21/Ritik_Portfolio.git
-cd Ritik_Portfolio
+git clone https://github.com/rajritik21/Portfolio.git
+cd Portfolio
 ```
 
 ### 2. Install Dependencies
@@ -187,7 +187,7 @@ Edit individual component files in [src/components/](src/components/) to update:
 
 1. Update `homepage` in [package.json](package.json) with your GitHub Pages URL:
 ```json
-"homepage": "https://YOUR_USERNAME.github.io/Ritik_Portfolio"
+"homepage": "https://YOUR_USERNAME.github.io/Portfolio"
 ```
 
 2. Install gh-pages (if not already installed):

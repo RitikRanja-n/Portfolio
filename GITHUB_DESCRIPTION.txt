@@ -19,8 +19,8 @@ A stunning, fully responsive portfolio built with React, TypeScript, and Tailwin
 • React Icon Cloud for skill visualization
 
 🚀 Quick Start:
-git clone https://github.com/rajritik21/Ritik_Portfolio.git
-cd Ritik_Portfolio
+git clone https://github.com/rajritik21/Portfolio.git
+cd Portfolio
 npm install
 npm start
 

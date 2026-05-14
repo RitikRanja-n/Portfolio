@@ -17,10 +17,6 @@ export const skillCategories: SkillCategory[] = [
     skills: ['Node.js', 'Express.js', '.NET Web API', 'REST API Integration'] 
   },
   {
-    title: 'Mobile & Cloud',
-    skills: ['Android', 'Android Studio', 'AWS', 'Vercel']
-  },
-  {
     title: 'Databases',
     skills: ['MongoDB', 'SQL', 'Mongoose'] 
   },
@@ -50,9 +46,6 @@ export const skillToSlug: Record<string, string> = {
   'Express.js': 'express',
   '.NET Web API': 'dotnet',
   'REST API Integration': 'postman',
-  'Android': 'android',
-  'Android Studio': 'androidstudio',
-  'AWS': 'amazonaws',
   'Vercel': 'vercel',
   'MongoDB': 'mongodb',
   'Mongoose': 'mongoose',
@@ -61,5 +54,9 @@ export const skillToSlug: Record<string, string> = {
   'JIRA': 'jira',
   'MediaPipe (Computer Vision)': 'mediapipe',
   'Postman': 'postman',
-  'VS Code': 'visualstudiocode'
+  'VS Code': 'visualstudiocode',
+  'Data Structures & Algorithms': 'datastructuresandalgorithms',
+  'DBMS': 'dbms',
+  'Operating Systems': 'operatingsystems',
+  'OOPs': 'oop' 
 };

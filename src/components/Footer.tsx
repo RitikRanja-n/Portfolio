@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
           
-          <div className="flex space-x-8 mb-6 md:mb-0">
+          <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 mb-6 md:mb-0">
             <Link to="about" smooth={true} duration={500} className="text-gray-400 hover:text-secondary cursor-pointer transition-colors">
               <span className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

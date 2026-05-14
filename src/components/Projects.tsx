@@ -116,7 +116,7 @@ const Projects: React.FC = () => {
 </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4 h-16">{project.description}</p>
+                <p className="text-gray-400 mb-4 min-h-[4rem] leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
                     <span

@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="font-poppins bg-primary text-white">
+    <div className="font-poppins bg-primary text-white overflow-x-hidden">
       <Navbar />
       <Hero />
       <Education />
