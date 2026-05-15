@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://drive.google.com/file/d/16gtrlkPsacIajepm4D6XxsDT6fiFgDIV/view?usp=sharing"
+              href="https://drive.google.com/file/d/1xfKj21Ia6upijHSu43uSyxHF4E0vJQ5c/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="btn border border-gray-600 text-white hover:border-secondary hover:text-secondary"

@@ -28,8 +28,8 @@ const Projects: React.FC = () => {
       description: "Real-time weather application that shows current conditions and forecasts for any location.",
       imageUrl: process.env.PUBLIC_URL + "/assets/weather1.png",
       technologies: ["React.js", "Axios", "OpenWeatherMap API "],
-      githubLink: "https://github.com/rajritik21/Weather-App",
-      demoLink: "https://rajritik21.github.io/Weather-App/"
+      githubLink: "https://github.com/RitikRanja-n/Weather-App",
+      demoLink: "https://ritikranja-n.github.io/Weather-App/"
     },
     {
       id: 3,
@@ -37,8 +37,8 @@ const Projects: React.FC = () => {
       description: "A premium AI-powered web application for real-time hand tracking, multi-finger counting, and neon air-canvas writing.",
       imageUrl: process.env.PUBLIC_URL + "/assets/handvisionpro.png",
       technologies: ["JavaScript", "MediaPipe Hands", "Air-Canvas"],
-      githubLink: "https://github.com/rajritik21/HandVision-Pro",
-      demoLink: "https://rajritik21.github.io/HandVision-Pro/"
+      githubLink: "https://github.com/RitikRanja-n/HandVision-Pro",
+      demoLink: "https://ritikranja-n.github.io/HandVision-Pro/"
     },
     {
       id: 4,
@@ -46,8 +46,8 @@ const Projects: React.FC = () => {
       description: "A modern interior design studio landing page developed by converting a Figma UI into a responsive web layout",
       imageUrl: process.env.PUBLIC_URL + "/assets/Blackstudio.png",
       technologies: ["JavaScript", "HTML", "CSS"],
-      githubLink: "https://github.com/rajritik21/Interior-design-landing-page",
-      demoLink: "https://rajritik21.github.io/Interior-design-landing-page/"
+      githubLink: "https://github.com/RitikRanja-n/Interior-design-landing-page",
+      demoLink: "https://ritikranja-n.github.io/Interior-design-landing-page/"
     }
   ];
 
@@ -192,7 +192,7 @@ const Projects: React.FC = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://github.com/rajritik21?tab=repositories"
+            href="https://github.com/ritikranja-n?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-secondary hover:underline"

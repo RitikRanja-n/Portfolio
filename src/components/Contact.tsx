@@ -101,7 +101,7 @@ const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY!;
               <motion.a
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://github.com/rajritik21"
+                href="https://github.com/RitikRanja-n"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-secondary transition-colors"
