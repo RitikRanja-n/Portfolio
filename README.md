@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with **React**, **TypeScript**, and **Tailwind CSS**. Showcase your skills, projects, education, and experience with a stunning interactive interface.
 
-**Live Demo:** [https://rajritik21.github.io/Portfolio/](https://rajritik21.github.io/Portfolio/)
+**Live Demo:** [https://ritikranja-n.github.io/Portfolio//](https://rajritik21.github.io/Portfolio/)
 
 ---
 
