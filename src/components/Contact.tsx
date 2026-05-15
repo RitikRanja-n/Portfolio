@@ -29,9 +29,9 @@ const Contact: React.FC = () => {
     setSubmitStatus(null);
     
     // TODO: Replace with your actual EmailJS credentials from emailjs.com dashboard
-    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID as string;
-    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID as string;
-    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string;
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID!;
+const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID!;
+const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY!;
 
     if (form.current) {
       emailjs.sendForm(serviceId, templateId, form.current, publicKey)
