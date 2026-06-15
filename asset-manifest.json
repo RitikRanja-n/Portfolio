@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/RitikRanja-n/Notebook_website/static/css/main.fca19c0e.css",
-    "main.js": "/RitikRanja-n/Notebook_website/static/js/main.9015344d.js",
-    "static/js/344.03365698.chunk.js": "/RitikRanja-n/Notebook_website/static/js/344.03365698.chunk.js",
-    "static/js/453.3f1fb51b.chunk.js": "/RitikRanja-n/Notebook_website/static/js/453.3f1fb51b.chunk.js",
-    "index.html": "/RitikRanja-n/Notebook_website/index.html",
-    "main.fca19c0e.css.map": "/RitikRanja-n/Notebook_website/static/css/main.fca19c0e.css.map",
-    "main.9015344d.js.map": "/RitikRanja-n/Notebook_website/static/js/main.9015344d.js.map",
-    "344.03365698.chunk.js.map": "/RitikRanja-n/Notebook_website/static/js/344.03365698.chunk.js.map",
-    "453.3f1fb51b.chunk.js.map": "/RitikRanja-n/Notebook_website/static/js/453.3f1fb51b.chunk.js.map"
+    "main.css": "/RitikRanja-n/Portfolio/static/css/main.d1c28aca.css",
+    "main.js": "/RitikRanja-n/Portfolio/static/js/main.1ea0aa32.js",
+    "static/js/344.b28e147b.chunk.js": "/RitikRanja-n/Portfolio/static/js/344.b28e147b.chunk.js",
+    "static/js/453.3f1fb51b.chunk.js": "/RitikRanja-n/Portfolio/static/js/453.3f1fb51b.chunk.js",
+    "index.html": "/RitikRanja-n/Portfolio/index.html",
+    "main.d1c28aca.css.map": "/RitikRanja-n/Portfolio/static/css/main.d1c28aca.css.map",
+    "main.1ea0aa32.js.map": "/RitikRanja-n/Portfolio/static/js/main.1ea0aa32.js.map",
+    "344.b28e147b.chunk.js.map": "/RitikRanja-n/Portfolio/static/js/344.b28e147b.chunk.js.map",
+    "453.3f1fb51b.chunk.js.map": "/RitikRanja-n/Portfolio/static/js/453.3f1fb51b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fca19c0e.css",
-    "static/js/main.9015344d.js"
+    "static/css/main.d1c28aca.css",
+    "static/js/main.1ea0aa32.js"
   ]
 }
