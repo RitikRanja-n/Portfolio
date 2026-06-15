@@ -4,6 +4,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Bot, User } from "lucide-react";
+import { SYSTEM_INSTRUCTION } from "./chatbotPrompt";
 
 type Message = {
   id: string;
@@ -43,44 +44,57 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      console.log("Sending message to backend /api/chat", { messageCount: messages.length + 1 });
-      
-      // Use localhost for development, or environment variable for production
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
-      const apiUrl = `${backendUrl}/api/chat`;
-      
-      console.log("API URL:", apiUrl);
-      
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          messages: [...messages, userMessage],
-        }),
-      });
+      const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
+      if (!apiKey) {
+        throw new Error("Gemini API Key is missing. Please add REACT_APP_GEMINI_API_KEY to your .env file.");
+      }
+
+      // Map our messages to Gemini API format
+      const history = [...messages, userMessage].map((msg) => ({
+        role: msg.role === "assistant" ? "model" : "user",
+        parts: [{ text: msg.content }],
+      }));
+
+      // In the Gemini API, the first message cannot be from the model. 
+      // We filter out the initial greeting to prevent API errors.
+      const conversationHistory = history.filter(msg => !(msg.role === "model" && msg.parts[0].text.includes("Hello! I am MY AI")));
+
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            systemInstruction: {
+              parts: [{ text: SYSTEM_INSTRUCTION }]
+            },
+            contents: conversationHistory,
+          }),
+        }
+      );
 
       const data = await response.json();
-      console.log("Response from /api/chat:", { status: response.status, hasContent: !!data.content, hasError: !!data.error });
 
       if (response.ok) {
+        const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't generate a response.";
         setMessages((prev) => [
           ...prev,
-          { id: (Date.now() + 1).toString(), role: "assistant", content: data.content },
+          { id: (Date.now() + 1).toString(), role: "assistant", content: replyText },
         ]);
       } else {
         console.error("API returned error:", data.error);
         setMessages((prev) => [
           ...prev,
-          { id: (Date.now() + 1).toString(), role: "assistant", content: data.error || "Sorry, I encountered an error. Please try again later." },
+          { id: (Date.now() + 1).toString(), role: "assistant", content: data.error?.message || "Sorry, I encountered an error. Please try again later." },
         ]);
       }
     } catch (error) {
       console.error("Network error details:", error);
       setMessages((prev) => [
         ...prev,
-        { id: (Date.now() + 1).toString(), role: "assistant", content: `Network error: ${error instanceof Error ? error.message : String(error)}` },
+        { id: (Date.now() + 1).toString(), role: "assistant", content: `Error: ${error instanceof Error ? error.message : String(error)}` },
       ]);
     } finally {
       setIsLoading(false);
